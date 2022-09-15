@@ -146,11 +146,11 @@ fetch("https://fakestoreapi.com/products/")
         function displayProducts(data) {
             console.log(data.price)
 
-            return " <div class=\"swiper-slide\">" + data.map(data =>
+            return " <div class=\"swiper-wrapper product-cont\">" + data.map(data =>
 
                 ` 
                
-                <div class="slide ">
+                <div class="slide over-ride">
                         <div class="icons">
                             <a href="#" class="fas fa-heart"></a>
                             <a href="#" class="fas fa-search"></a>
@@ -169,7 +169,7 @@ fetch("https://fakestoreapi.com/products/")
                                 <span>( ${data.rating.count} reviews )</span>
                             </div>
                             <h3>${data.title}</h3>
-                            <div class="price">${data.price} <span>$18.99</span></div>
+                            <div class="price">$ ${ data.price} <span>$18.99</span></div>
                             <a href="#" class="btn">add to cart</a>
                         </div>
           
